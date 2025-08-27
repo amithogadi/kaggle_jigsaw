@@ -1,0 +1,11 @@
+# Code Constraints
+# This file contains coding patterns and constraints to follow in this repository to avoid bugs.
+
+constraints:
+
+  - description: "All Python unit tests must be written in pytest and kept in tests/ folder, with internet-accessing tests marked as pytest.mark.live. Temporary test files named test_*.py or scratch_*.py are allowed in project root or respective packages, and test-specific modifications can be done in these temporary test files and scratch files"
+    tags: [ testing, file-organization, pytest ]
+    scope:
+      - "file tests/"
+      - "file test_*.py"
+      - "file scratch_*.py"

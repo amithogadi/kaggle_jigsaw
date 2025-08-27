@@ -1,0 +1,50 @@
+# Environment variables
+.env
+.env.local
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+build/
+dist/
+venv/
+
+# IDE and Editor
+.idea/
+.vscode/
+.ipynb_checkpoints/
+
+# OS
+.DS_Store
+
+# Logs and Debug
+*.log
+*.pot
+logs/
+debug_*
+
+# Data and temporary files
+data_folder/
+Untitled*
+
+# Testing (ignore files starting with test but preserve tests directory)
+test*
+!tests/
+!tests/**/*
+!tests/**/
+tests/**/__pycache__/
+
+# Hidden files and directories (but keep specific ones)
+.*
+!.gitignore
+!.github
+!.windsurf
+!.flake8
+!scratch.py
+
+# Claude - must come after .* rule to override it
+!.claude/
+!.claude/**
+.claude/settings.local.json
+
