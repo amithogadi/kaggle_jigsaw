@@ -37,7 +37,7 @@ class Comment:
     body: str
     rule: str
     subreddit: str
-    rule_violation: bool
+    rule_violation: float
 
     @staticmethod
     def extract_single(task: 'Task') -> List['Comment']:
@@ -46,7 +46,7 @@ class Comment:
         ans = [Comment(body=getattr(task, name), rule=task.rule, subreddit=task.subreddit, rule_violation=violation)
                for name, violation in zip(names, violations)]
         if task.rule_violation is not None and task.rule_violation in [0, 1]:
-            violation = task.rule_violation == 1
+            violation = task.rule_violation
             ans.append(Comment(body=task.body, rule=task.rule, subreddit=task.subreddit, rule_violation=violation))
         return ans
 

@@ -2,3 +2,6 @@ pandas
 openai
 dotenv
 openai
+peft
+sentence-transformers
+clean-text
